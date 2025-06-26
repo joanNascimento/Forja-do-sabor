@@ -1,0 +1,270 @@
+/* Estilos específicos para caldos.html */
+
+.caldos-hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/imagens/CALDO-CAPA.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.caldos-section {
+    padding: 4rem 0;
+}
+
+.caldos-section:nth-child(even) {
+    background-color: var(--background-light);
+}
+
+.caldos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.caldos-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.caldos-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: var(--caldos-yellow);
+}
+
+.caldos-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.caldos-content {
+    padding: 2rem;
+}
+
+.caldos-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--caldos-red-brown);
+    font-weight: bold;
+}
+
+.caldos-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.caldos-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--caldos-yellow);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.btn-caldos {
+    background: linear-gradient(135deg, var(--caldos-yellow), var(--caldos-red-brown));
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-caldos:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #E6C200, #660000);
+}
+
+.btn-caldos i {
+    margin-right: 8px;
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.category-header h2 {
+    font-size: 2.5rem;
+    color: var(--caldos-red-brown);
+    margin-bottom: 1rem;
+}
+
+.category-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.caldos-info {
+    background: linear-gradient(135deg, var(--caldos-yellow), var(--caldos-red-brown));
+    color: white;
+    padding: 3rem 0;
+    margin: 4rem 0;
+}
+
+.info-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.info-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-feature {
+    text-align: center;
+    padding: 1rem;
+}
+
+.info-feature i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.info-feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-feature p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.fidelidade-section {
+    background: linear-gradient(135deg, var(--caldos-green-soup), var(--caldos-red-brown));
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.fidelidade-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.fidelidade-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.fidelidade-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.fidelidade-emoji {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.combo-highlight {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 0, 0, 0.1));
+    border: 2px solid var(--caldos-yellow);
+}
+
+.combo-highlight .caldos-content h3 {
+    color: var(--caldos-yellow);
+}
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.extra-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.extra-item:hover {
+    transform: translateY(-3px);
+}
+
+.extra-item h3 {
+    color: var(--caldos-red-brown);
+    margin-bottom: 0.5rem;
+}
+
+.extra-item .price {
+    color: var(--caldos-yellow);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Responsividade específica */
+@media (max-width: 768px) {
+    .caldos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .extras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .caldos-content {
+        padding: 1.5rem;
+    }
+    
+    .category-header h2 {
+        font-size: 2rem;
+    }
+    
+    .info-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .fidelidade-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .caldos-item img {
+        height: 200px;
+    }
+}
+
