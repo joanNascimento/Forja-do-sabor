@@ -1,0 +1,195 @@
+/* Estilos específicos para manicoba.html */
+
+.manicoba-hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/imagens/MANICOBA-CAPA.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.manicoba-section {
+    padding: 4rem 0;
+}
+
+.manicoba-section:nth-child(even) {
+    background-color: var(--background-light);
+}
+
+.manicoba-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.manicoba-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.manicoba-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: var(--manicoba-earth-green);
+}
+
+.manicoba-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.manicoba-content {
+    padding: 2rem;
+}
+
+.manicoba-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--manicoba-earth-green);
+    font-weight: bold;
+}
+
+.manicoba-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.manicoba-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--manicoba-earth-brown);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.btn-manicoba {
+    background: linear-gradient(135deg, var(--manicoba-earth-green), var(--manicoba-earth-brown));
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-manicoba:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #4A5D27, #8B4513);
+}
+
+.btn-manicoba i {
+    margin-right: 8px;
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.category-header h2 {
+    font-size: 2.5rem;
+    color: var(--manicoba-earth-green);
+    margin-bottom: 1rem;
+}
+
+.category-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.manicoba-tradition {
+    background: linear-gradient(135deg, var(--manicoba-earth-green), var(--manicoba-earth-brown));
+    color: white;
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.tradition-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tradition-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.tradition-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.tradition-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tradition-feature {
+    text-align: center;
+    padding: 1rem;
+}
+
+.tradition-feature i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FFD700;
+}
+
+.tradition-feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tradition-feature p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsividade específica */
+@media (max-width: 768px) {
+    .manicoba-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tradition-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .manicoba-content {
+        padding: 1.5rem;
+    }
+    
+    .category-header h2 {
+        font-size: 2rem;
+    }
+    
+    .tradition-content h2 {
+        font-size: 2rem;
+    }
+    
+    .manicoba-item img {
+        height: 180px;
+    }
+}
+
