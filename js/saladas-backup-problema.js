@@ -211,77 +211,77 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Função para atualizar resumo
-    function atualizarResumo() {
-        if (!resumoDiv) return;
-        
-        let html = '<h3>Resumo do seu Pedido</h3>';
-        
-        if (pedidoAtual.tipo === 'plano' && pedidoAtual.plano) {
-            pedidoAtual.preco = pedidoAtual.plano.preco;
-            
-            html += `<div class="resumo-item"><strong>Plano:</strong> ${pedidoAtual.plano.nome.charAt(0).toUpperCase() + pedidoAtual.plano.nome.slice(1)}</div>`;
-            
-            if (pedidoAtual.base) {
-                html += `<div class="resumo-item"><strong>Base:</strong> ${pedidoAtual.base}</div>`;
-            }
-            
-            if (pedidoAtual.proteina) {
-                html += `<div class="resumo-item"><strong>Proteína:</strong> ${pedidoAtual.proteina}</div>`;
-            }
-            
-            if (pedidoAtual.extras.length > 0) {
-                html += `<div class="resumo-item"><strong>Extras:</strong> ${pedidoAtual.extras.join(', ')}</div>`;
-            }
-            
-            if (pedidoAtual.molho) {
-                html += `<div class="resumo-item"><strong>Molho:</strong> ${pedidoAtual.molho}</div>`;
-            }
-            
-        } else if (pedidoAtual.tipo === 'pronta' && pedidoAtual.saladaPronta) {
-            pedidoAtual.preco = pedidoAtual.saladaPronta.preco;
-            
-            const nomesSaladas = {
-                'mix-500': 'Salada Mix Completa 500ml',
-                'mix-750': 'Salada Mix Completa 750ml',
-                'mix-1000': 'Salada Mix Completa 1000ml',
-                'mix-camarao-500': 'Salada Mix com Camarão 500ml',
-                'mix-camarao-750': 'Salada Mix com Camarão 750ml',
-                'mix-camarao-1000': 'Salada Mix com Camarão 1000ml'
-            };
-            
-            html += `<div class="resumo-item"><strong>Salada:</strong> ${nomesSaladas[pedidoAtual.saladaPronta.nome] || pedidoAtual.saladaPronta.nome}</div>`;
-        } else {
-            html += '<p>Selecione um plano ou salada pronta para ver o resumo</p>';
-            resumoDiv.innerHTML = html;
-            return;
+   // Função para atualizar resumo
+function atualizarResumo() {
+    if (!resumoDiv) return;
+
+    let html = '<h3>Resumo do seu Pedido</h3>';
+
+    if (pedidoAtual.tipo === 'plano' && pedidoAtual.plano) {
+        pedidoAtual.preco = pedidoAtual.plano.preco;
+
+        html += `<div class="resumo-item"><strong>Plano:</strong> ${pedidoAtual.plano.nome.charAt(0).toUpperCase() + pedidoAtual.plano.nome.slice(1)}</div>`;
+
+        if (pedidoAtual.base) {
+            html += `<div class="resumo-item"><strong>Base:</strong> ${pedidoAtual.base}</div>`;
         }
-        
-        // Adicionar quantidade e total - CORREÇÃO PRINCIPAL AQUI
-        if (pedidoAtual.quantidade > 0 && pedidoAtual.preco > 0) {
-            const total = pedidoAtual.preco * pedidoAtual.quantidade; // CÁLCULO CORRETO DO TOTAL
-            html += `<div class="resumo-item"><strong>Quantidade:</strong> ${pedidoAtual.quantidade}</div>`;
-            html += `<div class="resumo-item total"><strong>TOTAL: R$ ${total.toFixed(2).replace('.', ',')}</strong></div>`;
+
+        if (pedidoAtual.proteina) {
+            html += `<div class="resumo-item"><strong>Proteína:</strong> ${pedidoAtual.proteina}</div>`;
         }
-        
+
+        if (pedidoAtual.extras.length > 0) {
+            html += `<div class="resumo-item"><strong>Extras:</strong> ${pedidoAtual.extras.join(', ')}</div>`;
+        }
+
+        if (pedidoAtual.molho) {
+            html += `<div class="resumo-item"><strong>Molho:</strong> ${pedidoAtual.molho}</div>`;
+        }
+
+    } else if (pedidoAtual.tipo === 'pronta' && pedidoAtual.saladaPronta) {
+        pedidoAtual.preco = pedidoAtual.saladaPronta.preco;
+
+        const nomesSaladas = {
+            'mix-500': 'Salada Mix Completa 500ml',
+            'mix-750': 'Salada Mix Completa 750ml',
+            'mix-1000': 'Salada Mix Completa 1000ml',
+            'mix-camarao-500': 'Salada Mix com Camarão 500ml',
+            'mix-camarao-750': 'Salada Mix com Camarão 750ml',
+            'mix-camarao-1000': 'Salada Mix com Camarão 1000ml'
+        };
+
+        html += `<div class="resumo-item"><strong>Salada:</strong> ${nomesSaladas[pedidoAtual.saladaPronta.nome] || pedidoAtual.saladaPronta.nome}</div>`;
+    } else {
+        html += '<p>Selecione um plano ou salada pronta para ver o resumo</p>';
         resumoDiv.innerHTML = html;
-        
-        // Habilitar/desabilitar botão WhatsApp
-        if (btnWhatsApp) {
-            const pedidoCompleto = (pedidoAtual.tipo === 'pronta' && pedidoAtual.saladaPronta) ||
-                                 (pedidoAtual.tipo === 'plano' && pedidoAtual.plano && pedidoAtual.base && pedidoAtual.proteina && pedidoAtual.molho);
-            
-            if (pedidoCompleto) {
-                btnWhatsApp.href = gerarLinkWhatsApp();
-                btnWhatsApp.style.opacity = '1';
-                btnWhatsApp.style.pointerEvents = 'auto';
-            } else {
-                btnWhatsApp.href = '#';
-                btnWhatsApp.style.opacity = '0.5';
-                btnWhatsApp.style.pointerEvents = 'none';
-            }
+        return;
+    }
+
+    // Adicionar quantidade e total
+    if (pedidoAtual.quantidade > 0 && pedidoAtual.preco > 0) {
+        const total = pedidoAtual.preco * pedidoAtual.quantidade;
+        html += `<div class="resumo-item"><strong>Quantidade:</strong> ${pedidoAtual.quantidade}</div>`;
+        html += `<div class="resumo-item total"><strong>TOTAL: R$ ${total.toFixed(2).replace('.', ',')}</strong></div>`;
+    }
+
+    resumoDiv.innerHTML = html;
+
+    // Habilitar/desabilitar botão WhatsApp
+    if (btnWhatsApp) {
+        const pedidoCompleto = (pedidoAtual.tipo === 'pronta' && pedidoAtual.saladaPronta) ||
+                               (pedidoAtual.tipo === 'plano' && pedidoAtual.plano && pedidoAtual.base && pedidoAtual.proteina && pedidoAtual.molho);
+
+        if (pedidoCompleto) {
+            btnWhatsApp.href = gerarLinkWhatsApp();
+            btnWhatsApp.style.opacity = '1';
+            btnWhatsApp.style.pointerEvents = 'auto';
+        } else {
+            btnWhatsApp.href = '#';
+            btnWhatsApp.style.opacity = '0.5';
+            btnWhatsApp.style.pointerEvents = 'none';
         }
     }
+}
 
     // Função para gerar link do WhatsApp - CORREÇÃO PRINCIPAL AQUI
     function gerarLinkWhatsApp() {
