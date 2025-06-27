@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         radio.addEventListener('change', function() {
             if (this.checked) {
                 console.log('Plano selecionado:', this.value);
+console.log('Estado do pedidoAtual após selecionar plano:', JSON.stringify(pedidoAtual));
                 
                 // Limpar saladas prontas
                 saladaProntaRadios.forEach(r => r.checked = false);
@@ -149,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         radio.addEventListener('change', function() {
             if (this.checked) {
                 console.log('Salada pronta selecionada:', this.value);
+console.log('Estado do pedidoAtual após selecionar salada pronta:', JSON.stringify(pedidoAtual));
                 
                 // Limpar planos
                 planoRadios.forEach(r => r.checked = false);
@@ -213,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para atualizar resumo
     function atualizarResumo() {
+console.log('Função atualizarResumo chamada');
         if (!resumoDiv) return;
         
         let html = '<h3>Resumo do seu Pedido</h3>';
@@ -269,10 +272,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Habilitar/desabilitar botão WhatsApp
         if (btnWhatsApp) {
             const pedidoCompleto = (pedidoAtual.tipo === 'pronta' && pedidoAtual.saladaPronta) ||
+console.log('Verificando pedidoCompleto com estado:', JSON.stringify(pedidoAtual));
                                  (pedidoAtual.tipo === 'plano' && pedidoAtual.plano && pedidoAtual.base && pedidoAtual.proteina && pedidoAtual.molho);
             
             if (pedidoCompleto) {
                 btnWhatsApp.href = gerarLinkWhatsApp();
+console.log('Botão WhatsApp ativado com link:', gerarLinkWhatsApp());
                 btnWhatsApp.style.opacity = '1';
                 btnWhatsApp.style.pointerEvents = 'auto';
             } else {
