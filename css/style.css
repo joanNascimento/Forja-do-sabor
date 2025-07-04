@@ -14,7 +14,7 @@
     --saladas-green-light: #4A7C59; /* Verde mais harmonioso */
     --saladas-green-dark: #2D5016; /* Verde terroso */
 
-    --gourmet-wine: #800020; /* Vinho */
+    --gourmet-wine: #800020; /* Verde mais harmonioso */
     --gourmet-wood-brown: #8B4513; /* Marrom madeira */
     --gourmet-gold-soft: #D4AF37; /* Dourado da logo */
 
@@ -914,5 +914,9 @@ footer {
         padding: 10px;
         font-size: 0.9rem;
     }
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
 }
 
