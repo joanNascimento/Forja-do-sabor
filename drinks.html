@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥂 Cardápio de Drinks - Forja do Sabor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drinks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/imagens/logo-forja-do-sabor.jpg" alt="Forja do Sabor" class="logo-image">
+                <div class="logo">Forja do Sabor</div>
+            </div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="saladas.html">Saladas</a></li>
+                    <li><a href="gourmet.html">Gourmet</a></li>
+                    <li><a href="manicoba.html">Maniçoba</a></li>
+                    <li><a href="caldos.html">Caldos</a></li>
+                    <li><a href="drinks.html">Drinks</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="como-pedir.html">Como Pedir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero drinks-hero">
+            <div class="hero-content">
+                <h1>🥂 Cardápio de Drinks - Forja do Sabor</h1>
+                <p>Drinks autorais e clássicos com sabores amazônicos únicos!</p>
+                <p class="disclaimer">Imagem meramente ilustrativa. Para saber mais sobre os produtos que estão saindo, siga o Instagram do @forja.do.sabor.</p>
+            </div>
+        </section>
+
+        <!-- Cardápio de Drinks -->
+        <section class="cardapio-section">
+            <div class="container">
+                <h2 class="section-title">🍹 NOSSOS DRINKS ESPECIAIS 🍹</h2>
+
+                <!-- Drink 1: Caipifruta de Morango -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-COCKTAIL.png" alt="Caipifruta de Morango">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🍓 Forja Rubra (Caipifruta de Morango)</h3>
+                        <p class="produto-descricao">Sucesso nacional e regional — refrescante e tropical.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 5 morangos frescos picados, 1 colher (sopa) de açúcar, 60ml de cachaça (ou vodka), gelo até completar, finalizar com água com gás ou soda (opcional)</p>
+                            <p><strong>500ml:</strong> 8 morangos frescos, 2 colheres (sopa) de açúcar, 100ml de cachaça (ou vodka), gelo até completar, finalizar com água com gás ou soda (opcional)</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 18,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Forja Rubra (Caipifruta de Morango)', '300ml', 18.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 25,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Forja Rubra (Caipifruta de Morango)', '500ml', 25.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 2: Caipirinha Tradicional -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-CAIPIRINHA.png" alt="Caipirinha Tradicional">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🍋 Caldeirão do Mestre (Caipirinha Tradicional de Limão)</h3>
+                        <p class="produto-descricao">Clássico brasileiro, muito pedido em todo o país.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 1 limão taiti cortado em 4, 1 colher (sopa) de açúcar, 60ml de cachaça, gelo até completar</p>
+                            <p><strong>500ml:</strong> 1½ limão, 2 colheres (sopa) de açúcar, 100ml de cachaça, gelo até completar</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 16,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Caldeirão do Mestre (Caipirinha Tradicional de Limão)', '300ml', 16.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 23,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Caldeirão do Mestre (Caipirinha Tradicional de Limão)', '500ml', 23.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 3: Caipifruta de Cupuaçu -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-TROPICAL.png" alt="Caipifruta de Cupuaçu">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🥭 Labareda Amazônica (Caipifruta de Cupuaçu)</h3>
+                        <p class="produto-descricao">Regional e muito valorizado pelo sabor amazônico.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 3 colheres (sopa) de polpa de cupuaçu, 1 colher (sopa) de açúcar, 60ml de vodka ou cachaça, gelo até completar</p>
+                            <p><strong>500ml:</strong> 5 colheres (sopa) de polpa de cupuaçu, 2 colheres (sopa) de açúcar, 100ml de vodka ou cachaça, gelo até completar</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 20,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Labareda Amazônica (Caipifruta de Cupuaçu)', '300ml', 20.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 28,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Labareda Amazônica (Caipifruta de Cupuaçu)', '500ml', 28.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 4: Pina Colada Paraense -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-TROPICAL.png" alt="Pina Colada Paraense">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🥥 Brisa da Fornalha (Pina Colada Paraense)</h3>
+                        <p class="produto-descricao">Muito vendida em festas — tropical e cremosa.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 50ml de rum branco, 50ml de leite de coco, 100ml de suco de abacaxi, 1 colher (sopa) de leite condensado, gelo até completar, bater tudo no liquidificador</p>
+                            <p><strong>500ml:</strong> 80ml de rum branco, 80ml de leite de coco, 180ml de suco de abacaxi, 2 colheres (sopa) de leite condensado, gelo até completar, bater tudo no liquidificador</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 20,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Brisa da Fornalha (Pina Colada Paraense)', '300ml', 20.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 28,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Brisa da Fornalha (Pina Colada Paraense)', '500ml', 28.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 5: Drink de Taperebá -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-TROPICAL.png" alt="Drink de Taperebá">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🍍 Chama do Taperebá (Drink de Taperebá/Cajá)</h3>
+                        <p class="produto-descricao">Muito popular no norte do Brasil, azedinho e refrescante.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 60ml de cachaça, 3 colheres (sopa) de polpa de taperebá, 1 colher (sopa) de açúcar, gelo até completar</p>
+                            <p><strong>500ml:</strong> 100ml de cachaça, 5 colheres (sopa) de polpa de taperebá, 2 colheres (sopa) de açúcar, gelo até completar</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 18,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Chama do Taperebá (Drink de Taperebá/Cajá)', '300ml', 18.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 25,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Chama do Taperebá (Drink de Taperebá/Cajá)', '500ml', 25.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 6: Mojito -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-MOJITO.png" alt="Mojito de Hortelã">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🍹 Vento da Forja (Mojito de Hortelã e Limão)</h3>
+                        <p class="produto-descricao">Refrescante, ideal para o calor amazônico.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 8 folhas de hortelã, 1 limão espremido, 1 colher (sopa) de açúcar, 50ml de rum branco, água com gás até completar, gelo</p>
+                            <p><strong>500ml:</strong> 12 folhas de hortelã, 1½ limão espremido, 2 colheres (sopa) de açúcar, 80ml de rum, água com gás até completar, gelo</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 17,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Vento da Forja (Mojito de Hortelã e Limão)', '300ml', 17.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 24,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Vento da Forja (Mojito de Hortelã e Limão)', '500ml', 24.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 7: Drink Cremoso de Açaí -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-TROPICAL.png" alt="Drink Cremoso de Açaí">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🍸 Bruto do Açaí (Drink Cremoso de Açaí com Vodka)</h3>
+                        <p class="produto-descricao">Diferenciado e com forte apelo local.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 150ml de açaí grosso (sem açúcar), 60ml de vodka, 1 colher (sopa) de leite condensado (opcional), gelo a gosto, bater tudo no liquidificador</p>
+                            <p><strong>500ml:</strong> 250ml de açaí, 100ml de vodka, 2 colheres (sopa) de leite condensado (opcional), gelo, bater no liquidificador</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 22,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Bruto do Açaí (Drink Cremoso de Açaí com Vodka)', '300ml', 22.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 30,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Bruto do Açaí (Drink Cremoso de Açaí com Vodka)', '500ml', 30.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drink 8: Forja Tropical -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="assets/imagens/DRINKS-TROPICAL.png" alt="Forja Tropical">
+                    </div>
+                    <div class="produto-info">
+                        <h3>🌴 Forja Tropical (Drink da Casa)</h3>
+                        <p class="produto-descricao">Exclusivo, colorido e com sabor marcante.</p>
+                        <div class="ingredientes">
+                            <h4>Ingredientes:</h4>
+                            <p><strong>300ml:</strong> 30ml de curaçau blue, 30ml de vodka, 50ml de suco de abacaxi, 50ml de suco de laranja, 1 colher (chá) de groselha (opcional), gelo até completar</p>
+                            <p><strong>500ml:</strong> 50ml de curaçau blue, 50ml de vodka, 100ml de suco de abacaxi, 100ml de suco de laranja, 1 colher (sopa) de groselha, gelo até completar</p>
+                        </div>
+                        <div class="tamanhos-precos">
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">300ml</span>
+                                <span class="preco">R$ 19,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Forja Tropical (Drink da Casa)', '300ml', 19.00, this)">Pedir</button>
+                            </div>
+                            <div class="tamanho-opcao">
+                                <span class="tamanho">500ml</span>
+                                <span class="preco">R$ 26,00</span>
+                                <div class="quantidade-controle">
+                                    <button class="btn-quantidade" onclick="diminuirQuantidade(this)">-</button>
+                                    <input type="number" value="1" min="1" class="quantidade-input">
+                                    <button class="btn-quantidade" onclick="aumentarQuantidade(this)">+</button>
+                                </div>
+                                <button class="btn-pedir" onclick="abrirModalPedido('Forja Tropical (Drink da Casa)', '500ml', 26.00, this)">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiracoes-section">
+                    <h2 class="section-title">Inspirações de Drinks</h2>
+                    <div class="inspiracoes-grid">
+                        <img src="assets/imagens/DRINKS-CAPA.png" alt="Drinks Inspiração 1">
+                        <img src="assets/imagens/DRINKS-COCKTAIL.png" alt="Drinks Inspiração 2">
+                        <img src="assets/imagens/DRINKS-MOJITO.png" alt="Drinks Inspiração 3">
+                    </div>
+                    <p class="disclaimer">Imagem meramente ilustrativa. Para saber mais sobre os produtos que estão saindo, siga o Instagram do @forja.do.sabor.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fab fa-whatsapp"></i> (91) 98514-8050</p>
+                    <p><i class="fab fa-instagram"></i> @forja.do.sabor</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Domingo: 17h às 23h</p>
+                    <p><small>*Horários podem variar em feriados</small></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Entrega</h3>
+                    <p>Taxa de entrega: A partir de R$ 5,00</p>
+                    <p>Drinks: Prazo de 30-45 minutos</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Forja do Sabor. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="float-buttons">
+        <a href="https://www.instagram.com/forja.do.sabor?igsh=MXFpMnN5ODhmOG0zbA==" class="instagram-float" target="_blank">
+            <img src="assets/icones/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5591985148050" class="whatsapp-float" target="_blank">
+            <img src="assets/icones/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/drinks.js"></script>
+    <script src="js/pedido-completo.js"></script>
+</body>
+</html>
+
