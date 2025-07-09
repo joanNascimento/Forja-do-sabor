@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tábuas & Combos Gourmet - Forja do Sabor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gourmet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/imagens/logo-forja-do-sabor.jpg" alt="Forja do Sabor" class="logo-image">
+                <div class="logo">Forja do Sabor</div>
+            </div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="saladas.html">Saladas</a></li>
+                    <li><a href="gourmet.html">Gourmet</a></li>
+                    <li><a href="manicoba.html">Maniçoba</a></li>
+                    <li><a href="caldos.html">Caldos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="como-pedir.html">Como Pedir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero gourmet-hero">
+            <div class="hero-content">
+                <h1>Tábuas & Combos Gourmet</h1>
+                <p>Experiências gastronômicas únicas com os melhores frios e queijos selecionados</p>
+                <p class="disclaimer">Imagem meramente ilustrativa. Para saber mais sobre os produtos que estão saindo, siga o Instagram do @forja.do.sabor.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Características -->
+        <section class="gourmet-features">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Por que escolher nossos produtos gourmet?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Ingredientes Premium</h3>
+                        <p>Selecionamos apenas os melhores frios e queijos para suas tábuas</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Feito com Carinho</h3>
+                        <p>Cada tábua é montada artesanalmente com atenção aos detalhes</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Para Toda Ocasião</h3>
+                        <p>Perfeito para encontros românticos, reuniões familiares ou eventos especiais</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tábuas de Frios -->
+        <section class="gourmet-section">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Tábuas de Frios</h2>
+                    <p>Nossas tábuas clássicas com uma seleção especial de frios, queijos e acompanhamentos</p>
+                </div>
+                <div class="gourmet-grid">
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-P.jpg" alt="Brasa Suave">
+                        <div class="gourmet-content">
+                            <h3>Brasa Suave</h3>
+                            <p>Uma entrada perfeita com seleção de frios suaves e queijos cremosos, ideal para começar uma refeição especial.</p>
+                            <div class="gourmet-price">R$ 39,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Tábua Brasa Suave', 39.90, 'Tábua pequena com seleção de frios suaves e queijos cremosos')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-M.jpg" alt="Forja Clássica">
+                        <div class="gourmet-content">
+                            <h3>Forja Clássica</h3>
+                            <p>Nossa tábua tradicional com uma variedade equilibrada de frios e queijos, perfeita para compartilhar.</p>
+                            <div class="gourmet-price">R$ 69,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Tábua Forja Clássica', 69.90, 'Tábua tradicional com variedade equilibrada de frios e queijos')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-PREMIUM.jpg" alt="Fogo Nobre">
+                        <div class="gourmet-content">
+                            <h3>Fogo Nobre</h3>
+                            <p>Seleção premium com frios nobres e queijos especiais, uma experiência gastronômica sofisticada.</p>
+                            <div class="gourmet-price">R$ 119,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Tábua Fogo Nobre', 119.90, 'Seleção premium com frios nobres e queijos especiais')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-G.jpg" alt="Banquete do Ferreiro">
+                        <div class="gourmet-content">
+                            <h3>Banquete do Ferreiro</h3>
+                            <p>Nossa maior tábua, ideal para grandes celebrações com uma abundante variedade de sabores únicos.</p>
+                            <div class="gourmet-price">R$ 189,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Tábua Banquete do Ferreiro', 189.90, 'Tábua grande ideal para grandes celebrações')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="disclaimer">Imagem meramente ilustrativa. Para saber mais sobre os produtos que estão saindo, siga o Instagram do @forja.do.sabor.</p>
+            </div>
+        </section>
+
+        <!-- Barcas Forja do Sabor -->
+        <section class="gourmet-section">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Barcas Forja do Sabor</h2>
+                    <p>Nossas barcas especiais em diferentes tamanhos para atender todas as suas necessidades</p>
+                </div>
+                <div class="gourmet-grid">
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-P.jpg" alt="Barca P">
+                        <div class="gourmet-content">
+                            <h3>Barca P</h3>
+                            <p>Barca pequena ideal para casais ou pequenos encontros, com uma seleção cuidadosa de sabores.</p>
+                            <div class="gourmet-price">R$ 80,00</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Barca P', 80.00, 'Barca pequena ideal para casais ou pequenos encontros')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-M.jpg" alt="Barca M">
+                        <div class="gourmet-content">
+                            <h3>Barca M</h3>
+                            <p>Barca média perfeita para pequenos grupos e reuniões familiares, com variedade e qualidade.</p>
+                            <div class="gourmet-price">R$ 130,00</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Barca M', 130.00, 'Barca média perfeita para pequenos grupos e reuniões familiares')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-G.jpg" alt="Barca G">
+                        <div class="gourmet-content">
+                            <h3>Barca G</h3>
+                            <p>Nossa barca grande para eventos especiais e grandes celebrações, abundante em sabores e apresentação.</p>
+                            <div class="gourmet-price">R$ 180,00</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Barca G', 180.00, 'Barca grande para eventos especiais e grandes celebrações')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="disclaimer">Imagem meramente ilustrativa. Para saber mais sobre os produtos que estão saindo, siga o Instagram do @forja.do.sabor.</p>
+            </div>
+        </section>
+
+        <!-- Combos Especiais -->
+        <section class="gourmet-section">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Combos Especiais</h2>
+                    <p>Combinações únicas criadas especialmente para momentos inesquecíveis</p>
+                </div>
+                <div class="gourmet-grid">
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-P.jpg" alt="Combo Casal">
+                        <div class="gourmet-content">
+                            <h3>Combo Casal</h3>
+                            <p>Perfeito para um encontro romântico, com seleção especial de frios e queijos para dois.</p>
+                            <div class="gourmet-price">R$ 89,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Combo Casal', 89.90, 'Perfeito para um encontro romântico')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS1.jpg" alt="Combo Amigos">
+                        <div class="gourmet-content">
+                            <h3>Combo Amigos</h3>
+                            <p>Ideal para reunir os amigos, com uma variedade que agrada todos os paladares.</p>
+                            <div class="gourmet-price">R$ 149,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Combo Amigos', 149.90, 'Ideal para reunir os amigos com variedade que agrada todos os paladares')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-BARCA-G.jpg" alt="Combo Amor em Tábuas">
+                        <div class="gourmet-content">
+                            <h3>Amor em Tábuas</h3>
+                            <p>Uma declaração de amor em forma de tábua, com os sabores mais especiais e românticos.</p>
+                            <div class="gourmet-price">R$ 109,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Combo Amor em Tábuas', 109.90, 'Uma declaração de amor em forma de tábua')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gourmet-item">
+                        <img src="assets/imagens/FRIOS-PREMIUM.jpg" alt="Combo Noite de Vinhos">
+                        <div class="gourmet-content">
+                            <h3>Noite de Vinhos</h3>
+                            <p>Seleção premium especialmente harmonizada para acompanhar seus melhores vinhos.</p>
+                            <div class="gourmet-price">R$ 199,90</div>
+                            <a href="#" class="btn-gourmet" onclick="fazerPedidoDireto('Combo Noite de Vinhos', 199.90, 'Seleção premium harmonizada para acompanhar vinhos')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pedir Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="disclaimer">Imagem meramente ilustrativa. Para saber mais sobre os produtos que estão saindo, siga o Instagram do @forja.do.sabor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fab fa-whatsapp"></i> (91) 98514-8050</p>
+                    <p><i class="fab fa-instagram"></i> @forja.do.sabor</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Domingo: 17h às 23h</p>
+                    <p><small>*Horários podem variar em feriados</small></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Entrega</h3>
+                    <p>Taxa de entrega na região metropolitana de Belém: R$ 5,00</p>
+                    <p>Tábuas grandes: Prazo de 24h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Forja do Sabor. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="float-buttons">
+        <a href="https://www.instagram.com/forja.do.sabor?igsh=MXFpMnN5ODhmOG0zbA==" class="instagram-float" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5591985148050" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/gourmet.js"></script>
+    <script src="js/pedido-completo.js"></script>
+</body>
+</html>
+

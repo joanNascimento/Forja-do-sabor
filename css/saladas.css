@@ -1,0 +1,777 @@
+/* Estilos específicos para saladas */
+.saladas-hero {
+    background: linear-gradient(rgba(45, 80, 22, 0.8), rgba(45, 80, 22, 0.8)), url('../assets/imagens/SALADA-CAPA.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 8rem 0 4rem;
+    position: relative;
+}
+
+.ready-salads {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.ready-salad-option {
+    background: white;
+    border: 2px solid var(--saladas-green-light);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.ready-salad-option:hover {
+    border-color: var(--saladas-green-dark);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.2);
+}
+
+.ready-salad-option h4 {
+    color: var(--saladas-green-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.ready-salad-option p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.salad-sizes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.size-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.size-option:hover {
+    background-color: #f0f8f0;
+    border-color: var(--saladas-green-light);
+}
+
+.size-option input[type="radio"]:checked + span {
+    color: var(--saladas-green-dark);
+    font-weight: bold;
+}
+
+.molho-info {
+    background: linear-gradient(135deg, #f0f8f0, #e8f5e8);
+    border: 2px solid var(--saladas-green-light);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.molho-info p {
+    margin: 0.25rem 0;
+    color: var(--saladas-green-dark);
+}
+
+.molho-info strong {
+    color: var(--saladas-green-dark);
+    font-size: 1.1rem;
+}ckground-color: var(--background-light);
+}
+
+.salada-form {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--saladas-green-dark);
+}
+
+.plan-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.plan-option {
+    position: relative;
+}
+
+.plan-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.plan-card {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.plan-option input[type="radio"]:checked + .plan-card {
+    border-color: var(--saladas-green-dark);
+    background: linear-gradient(135deg, var(--saladas-green-light), var(--saladas-green-dark));
+    color: white;
+}
+
+.plan-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.plan-option input[type="radio"]:checked + .plan-card h3 {
+    color: white;
+}
+
+.plan-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.plan-option input[type="radio"]:checked + .plan-card .price {
+    color: white;
+}
+
+.plan-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.plan-option input[type="radio"]:checked + .plan-card p {
+    color: rgba(255,255,255,0.9);
+}
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.extra-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.extra-option:hover {
+    background-color: #f0f8f0;
+}
+
+.extra-option input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.extra-option input[type="checkbox"]:checked + label {
+    color: var(--saladas-green-dark);
+    font-weight: bold;
+}
+
+.extra-option.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.extra-option.disabled:hover {
+    background-color: transparent;
+}
+
+.molho-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.molho-option {
+    position: relative;
+}
+
+.molho-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.molho-card {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.molho-option input[type="radio"]:checked + .molho-card {
+    border-color: var(--saladas-green-dark);
+    background-color: #f0f8f0;
+}
+
+.resumo-pedido {
+    background: linear-gradient(135deg, var(--saladas-green-light), var(--saladas-green-dark));
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.resumo-pedido h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.resumo-item {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.resumo-item:last-child {
+    border-bottom: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp i {
+    margin-right: 10px;
+}
+
+.inspiracao-section {
+    padding: 4rem 0;
+}
+
+.inspiracao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.inspiracao-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.inspiracao-item:hover {
+    transform: translateY(-5px);
+}
+
+.inspiracao-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.warning-message {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.protein-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsividade específica */
+@media (max-width: 768px) {
+    .plan-selector {
+        grid-template-columns: 1fr;
+    }
+    
+    .extras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .molho-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .inspiracao-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .salada-form {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+}
+
+
+/* Estilos para campo de quantidade */
+.quantidade-group {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+}
+
+.quantidade-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.qty-btn:active {
+    transform: scale(0.95);
+}
+
+#quantidade {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background: white;
+}
+
+/* Melhorias no resumo */
+.resumo-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.resumo-item:last-child {
+    border-bottom: none;
+}
+
+.resumo-item.total {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Melhorias nos planos */
+.plan-option input[type="radio"]:checked + .plan-card {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Melhorias nas saladas prontas */
+.size-option input[type="radio"]:checked + span {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Estados desabilitados */
+.form-group.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.form-group.disabled::after {
+    content: "Selecione um plano primeiro";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Responsividade para quantidade */
+@media (max-width: 768px) {
+    .quantidade-controls {
+        justify-content: center;
+    }
+    
+    .qty-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+    
+    #quantidade {
+        width: 70px;
+        height: 35px;
+        font-size: 1em;
+    }
+}
+
+
+/* Estilos para o novo cardápio de saladas */
+.cardapio-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.salada-item {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.salada-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.salada-item.combo {
+    border-color: var(--gold-text);
+    background: linear-gradient(135deg, #fff 0%, #fffbf0 100%);
+}
+
+.salada-header h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.salada-item.combo .salada-header h3 {
+    color: var(--gold-text);
+}
+
+.salada-description {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.ingredientes {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(45, 80, 22, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.salada-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.size-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.size-option:hover {
+    background: #e9ecef;
+    border-color: var(--primary-color);
+}
+
+.size-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.size {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.price {
+    color: var(--gold-text);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.qty-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.qty-btn:active {
+    transform: scale(0.95);
+}
+
+.quantity-controls input {
+    width: 50px;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+    background: white;
+}
+
+.btn-pedido {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.btn-pedido:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-pedido:active {
+    transform: translateY(0);
+}
+
+.btn-pedido i {
+    font-size: 1.1rem;
+}
+
+.dica-forja {
+    background: linear-gradient(135deg, var(--gold-text) 0%, #f4d03f 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.dica-forja h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.dica-forja p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contato-info {
+    background: var(--primary-color);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contato-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.contato-info p:last-child {
+    font-weight: bold;
+    color: var(--gold-text);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .salada-item {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .size-option {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .quantity-controls {
+        margin: 0;
+    }
+    
+    .salada-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .salada-description {
+        font-size: 0.9rem;
+    }
+    
+    .ingredientes {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardapio-section {
+        padding: 40px 0;
+    }
+    
+    .salada-item {
+        padding: 15px;
+    }
+    
+    .size-option {
+        padding: 12px;
+    }
+    
+    .btn-pedido {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .qty-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .quantity-controls input {
+        width: 40px;
+        padding: 6px;
+    }
+}
+
