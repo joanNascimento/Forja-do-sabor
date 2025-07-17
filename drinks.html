@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forja do Sabor - Drinks Forjados na Brasa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/drinks.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/imagens/logo-forja-do-sabor.jpg" alt="Forja do Sabor" class="logo-image">
+                <div class="logo">Forja do Sabor</div>
+            </div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="saladas.html">Saladas</a></li>
+                    <li><a href="gourmet.html">Gourmet</a></li>
+                    <li><a href="manicoba.html">Maniçoba</a></li>
+                    <li><a href="caldos.html">Caldos</a></li>
+                    <li><a href="drinks.html">Drinks</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="como-pedir.html">Como Pedir</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Ícone do Carrinho -->
+        <div class="cart-icon-header" onclick="openCartModal()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-header" id="cartCountHeader">0</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Banner de Capa (Hero Image) -->
+        <section class="hero-banner" style="background-image: url(\'assets/imagens/drink-hero-new.jpg\
+')">
+            <div class="hero-content">
+                <h1>🍹 Drinks Forjados na Brasa</h1>
+                <p>Sinta o sabor, sinta o fogo. A nova experiência da Forja do Sabor.</p>
+                <a href="#carousel-destaques" class="btn">Ver Cardápio de Drinks</a>
+            </div>
+        </section>
+
+        <!-- 2. Carrossel de Destaques -->
+        <section class="highlight-carousel" id="carousel-destaques">
+            <div class="carousel-container">
+                <div class="carousel-slide-item active">
+                    <img src="assets/imagens/carousel-drink.jpg" alt="Chama Azul da Forja">
+                    <div class="slide-content">
+                        <h3>Chama Azul da Forja</h3>
+                        <p>Cítrico e vibrante!</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                    </div>
+                </div>
+                <div class="carousel-slide-item">
+                    <img src="assets/imagens/strawberry-drink.jpg" alt="Martelo Gelado da Forja">
+                    <div class="slide-content">
+                        <h3>Martelo Gelado da Forja</h3>
+                        <p>Refrescante e potente!</p>
+                        <p class="price">300ml: R$ 21,00 | 500ml: R$ 28,00</p>
+                    </div>
+                </div>
+                <div class="carousel-slide-item">
+                    <img src="assets/imagens/red-drink.jpg" alt="Brasa do Prazer">
+                    <div class="slide-content">
+                        <h3>Brasa do Prazer</h3>
+                        <p>Doce e envolvente!</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                    </div>
+                </div>
+                <div class="carousel-slide-item">
+                    <img src="assets/imagens/caipirinha-double.jpg" alt="Forja de Cupuaçu">
+                    <div class="slide-content">
+                        <h3>Forja de Cupuaçu</h3>
+                        <p>Exótico e cremoso!</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                    </div>
+                </div>
+                <div class="carousel-slide-item">
+                    <img src="assets/imagens/caipirinha-promo.jpg" alt="Brasa de Morango & Ninho">
+                    <div class="slide-content">
+                        <h3>Brasa de Morango & Ninho</h3>
+                        <p>Doce e irresistível!</p>
+                        <p class="price">300ml: R$ 22,00 | 500ml: R$ 30,00</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-nav-btn carousel-prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-nav-btn carousel-next-btn"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <!-- 3. Seção – Drinks Clássicos da Forja -->
+        <section class="drinks-section">
+            <h2>🍸 Drinks Clássicos da Forja</h2>
+            <div class="drinks-grid">
+                <div class="drink-card">
+                    <img src="assets/imagens/red-drink.jpg" alt="Chama Azul da Forja">
+                    <div class="card-content">
+                        <h3>Chama Azul da Forja</h3>
+                        <p>Ingredientes: Vodka, curaçau blue, suco de limão, hortelã</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                        <button class="add-to-cart-btn" data-name="Chama Azul da Forja" data-price-300="20.00" data-price-500="27.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/strawberry-drink.jpg" alt="Martelo Gelado da Forja">
+                    <div class="card-content">
+                        <h3>Martelo Gelado da Forja</h3>
+                        <p>Ingredientes: Vodka, espuma de gengibre, limão</p>
+                        <p class="price">300ml: R$ 21,00 | 500ml: R$ 28,00</p>
+                        <button class="add-to-cart-btn" data-name="Martelo Gelado da Forja" data-price-300="21.00" data-price-500="28.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/carousel-drink.jpg" alt="Brasa do Prazer">
+                    <div class="card-content">
+                        <h3>Brasa do Prazer</h3>
+                        <p>Ingredientes: Licor de pêssego, suco de laranja, vodka</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                        <button class="add-to-cart-btn" data-name="Brasa do Prazer" data-price-300="20.00" data-price-500="27.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/red-drink.jpg" alt="Brasas de Vermelho">
+                    <div class="card-content">
+                        <h3>Brasas de Vermelho</h3>
+                        <p>Ingredientes: Campari, suco de laranja, gelo, twist de laranja</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                        <button class="add-to-cart-btn" data-name="Brasas de Vermelho" data-price-300="20.00" data-price-500="27.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/caipirinha-double.jpg" alt="Fogo do Abacaxi">
+                    <div class="card-content">
+                        <h3>Fogo do Abacaxi</h3>
+                        <p>Ingredientes: Suco de abacaxi, cachaça ou vodka, hortelã, leite condensado</p>
+                        <p class="price">300ml: R$ 19,00 | 500ml: R$ 26,00</p>
+                        <button class="add-to-cart-btn" data-name="Fogo do Abacaxi" data-price-300="19.00" data-price-500="26.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/red-drink.jpg" alt="Brasa de Cacau">
+                    <div class="card-content">
+                        <h3>Brasa de Cacau</h3>
+                        <p>Ingredientes: Licor de chocolate, leite ou vodka, calda e raspas</p>
+                        <p class="price">300ml: R$ 21,00 | 500ml: R$ 28,00</p>
+                        <button class="add-to-cart-btn" data-name="Brasa de Cacau" data-price-300="21.00" data-price-500="28.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/strawberry-drink.jpg" alt="Néctar da Forja">
+                    <div class="card-content">
+                        <h3>Néctar da Forja</h3>
+                        <p>Ingredientes: Morangos frescos, vodka, leite condensado, calda</p>
+                        <p class="price">300ml: R$ 21,00 | 500ml: R$ 28,00</p>
+                        <button class="add-to-cart-btn" data-name="Néctar da Forja" data-price-300="21.00" data-price-500="28.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Seção – Frozen Forjados -->
+        <section class="drinks-section frozen-background">
+            <h2>❄ Frozen Forjados</h2>
+            <div class="drinks-grid">
+                <div class="drink-card">
+                    <img src="assets/imagens/carousel-drink.jpg" alt="Forja de Cupuaçu">
+                    <div class="card-content">
+                        <h3>Forja de Cupuaçu</h3>
+                        <p>Ingredientes: Cupuaçu, vodka, leite condensado</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                        <button class="add-to-cart-btn" data-name="Forja de Cupuaçu" data-price-300="20.00" data-price-500="27.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/caipirinha-promo.jpg" alt="Chama de Manga com Pimenta">
+                    <div class="card-content">
+                        <h3>Chama de Manga com Pimenta</h3>
+                        <p>Ingredientes: Manga, vodka, pimenta rosa, gelo</p>
+                        <p class="price">300ml: R$ 21,00 | 500ml: R$ 28,00</p>
+                        <button class="add-to-cart-btn" data-name="Chama de Manga com Pimenta" data-price-300="21.00" data-price-500="28.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/strawberry-drink.jpg" alt="Gelo do Taperebá">
+                    <div class="card-content">
+                        <h3>Gelo do Taperebá</h3>
+                        <p>Ingredientes: Taperebá, cachaça, limão, açúcar</p>
+                        <p class="price">300ml: R$ 20,00 | 500ml: R$ 27,00</p>
+                        <button class="add-to-cart-btn" data-name="Gelo do Taperebá" data-price-300="20.00" data-price-500="27.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/caipirinha-double.jpg" alt="Forja de Maracujá Cremoso">
+                    <div class="card-content">
+                        <h3>Forja de Maracujá Cremoso</h3>
+                        <p>Ingredientes: Maracujá, vodka, creme de leite</p>
+                        <p class="price">300ml: R$ 21,00 | 500ml: R$ 29,00</p>
+                        <button class="add-to-cart-btn" data-name="Forja de Maracujá Cremoso" data-price-300="21.00" data-price-500="29.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <img src="assets/imagens/strawberry-drink.jpg" alt="Brasa de Morango & Ninho">
+                    <div class="card-content">
+                        <h3>Brasa de Morango & Ninho</h3>
+                        <p>Ingredientes: Morangos, leite Ninho, leite condensado, calda</p>
+                        <p class="price">300ml: R$ 22,00 | 500ml: R$ 30,00</p>
+                        <button class="add-to-cart-btn" data-name="Brasa de Morango & Ninho" data-price-300="22.00" data-price-500="30.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Bloco de Integração com Tábuas e Caldos -->
+        <section class="integration-block">
+            <div class="integration-content">
+                <h2>🍴 Experimente a combinação perfeita: Drinks Forjados + Tábuas Gourmet ou Caldos Artesanais</h2>
+                <a href="gourmet.html" class="btn">Ver Combos da Forja</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fab fa-whatsapp"></i> (91) 98514-8050</p>
+                    <p><i class="fab fa-instagram"></i> @forja.do.sabor</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Domingo: 17h às 23h</p>
+                    <p><small>*Horários podem variar em feriados</small></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Entrega</h3>
+                    <p>Taxa de entrega: A partir de R$ 5,00</p>
+                    <p>Tábuas grandes: Prazo de 24h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Forja do Sabor. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <div class="float-buttons">
+        <a href="https://www.instagram.com/forja.do.sabor?igsh=MXFpMnN5ODhmOG0zbA==" class="instagram-float" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5591985148050" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+
+    <!-- Modal do Carrinho -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <ul id="cartItemsList" class="cart-items-list">
+                <!-- Itens do carrinho serão adicionados aqui via JS -->
+            </ul>
+            <div class="cart-total">Total: R$ <span id="cartTotal">0.00</span></div>
+            <button id="checkoutButton" class="checkout-button">Finalizar Pedido (WhatsApp)</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/drinks.js"></script>
+</body>
+</html>
+
+
